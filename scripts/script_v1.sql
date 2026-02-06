@@ -7,6 +7,8 @@ CREATE DATABASE inventario_db;
 CREATE TABLE productos (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
+    lote VARCHAR(10) NOT NULL,
+    fecha_caducidad TIMESTAMP DEFAULT NULL,
     categoria VARCHAR(50),
     precio DECIMAL(10,2) NOT NULL
 );
